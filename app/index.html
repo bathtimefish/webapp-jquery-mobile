@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>webapp jquery mobile</title>
+    <meta name="description" content="">
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/jquery-mobile-bower/css/jquery.mobile-1.4.2.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/custom-theme/custom-theme.min.css" />
+    <link rel="stylesheet" href="styles/custom-theme/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <!-- home page -->
+    <div data-role="page" id="home">
+        <header data-role="header" data-position="fixed">
+            <h1>Hello JQM</h1>
+            <a href="#menu-panel-main" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left" data-role="button" role="button">Menu</a>
+        </header>
+        <main data-role="main" class="ui-content">
+                <div class="jqm-block-content">
+                    <h2>You now have</h2>
+                    <ul>
+                    <li>HTML5 Boilerplate</li>
+                    <li>Sass</li>
+                    <li>Modernizr</li>
+                    <li>Jquery Mobile</li>
+                    </ul>
+                </div>
+                <div class="home-button-area">
+                    <button id="gotoJqm" data-icon="heart" data-iconpos="bottom" data-theme="b">Enjoy jQuery Mobile!</button>
+                    <button id="gotoThemeroller" data-icon="eye" data-iconpos="bottom" data-theme="c">Go To ThemeRoller!</button>
+                </div>
+        </main>
+        <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" id="menu-panel-main">
+            <ul data-role="listview" class="jqm-list ui-alt-icon ui-nodisc-icon">
+                <li data-icon="home"><a>Home</a></li>
+                <li data-icon="search"><a href="#search">Search</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+                <li><a href="#">Item 4</a></li>
+                <li><a href="#">Item 5</a></li>
+            </ul>
+        </div>
+        <footer data-role="footer" data-position="fixed" data-fullscreen="false">
+            <nav data-role="navbar">
+                <ul>
+                    <li><a href="http://www.bathtimefish.com" data-icon="action">Author's Page</a></li>
+                    <li><a href="#information" data-icon="info" data-rel="dialog" data-transition="pop">About</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
+    <!-- search page -->
+    <div data-role="page" id="search">
+        <header data-role="header" data-position="fixed">
+            <h1>Search</h1>
+            <a href="#menu-panel-search" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left" data-role="button" role="button">Menu</a>
+        </header>
+        <main data-role="main" class="ui-content">
+            <h2>Keyword Search</h2>
+            <form>
+                <input data-type="search" id="searchForCollapsibleSetChildren">
+            </form>
+            <div data-role="collapsible-set" data-filter="true" data-children="> div, > div div ul li" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
+                <div data-role="collapsible" data-filtertext="Animals Cats Dogs Lizards snakes" data-collapsed="false">
+                    <h3>Animals</h3>
+                    <ul data-role="listview" data-inset="false">
+                        <li data-filtertext="Animals Cats">Cats</li>
+                        <li data-filtertext="Animals Dogs">Dogs</li>
+                        <li data-filtertext="Animals Lizards">Lizards</li>
+                        <li data-filtertext="Animals Snakes">Snakes</li>
+                    </ul>
+                </div>
+                <div data-role="collapsible" data-filtertext="Cars Acura Audi BMW Cadillac">
+                    <h3>Cars</h3>
+                    <ul data-role="listview" data-inset="false">
+                        <li data-filtertext="Cars Acura">Acura</li>
+                        <li data-filtertext="Cars Audi">Audi</li>
+                        <li data-filtertext="Cars BMW">BMW</li>
+                        <li data-filtertext="Cars Cadillac">Cadillac</li>
+                    </ul>
+                </div>
+                <div data-role="collapsible" data-filtertext="Planets Earth Jupiter Mars Mercury">
+                    <h3>Planets</h3>
+                    <ul data-role="listview" data-inset="false">
+                        <li data-filtertext="Planets Acura">Earth</li>
+                        <li data-filtertext="Planets Jupiter">Jupiter</li>
+                        <li data-filtertext="Planets Mars">Mars</li>
+                        <li data-filtertext="Planets Mercury">Mercury</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <div data-role="panel" class="jqm-navmenu-panel" data-position="left" data-display="overlay" id="menu-panel-search">
+            <ul data-role="listview" class="jqm-list ui-alt-icon ui-nodisc-icon">
+                <li data-icon="home"><a href="#home">Home</a></li>
+                <li data-icon="search"><a>Search</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- information dialog -->
+    <div data-role="page" id="information">
+        <header data-role="header">
+            <h1>About</h1>
+        </header>
+        <main data-role="main" class="ui-content">
+            <p>webapp-jquery-mobile</p>
+            <a href="http://github.com/bathtimefish/webapp-jquery-mobile">Github</a>
+        </main>
+    </div>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-mobile-bower/js/jquery.mobile-1.4.2.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
