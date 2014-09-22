@@ -1,6 +1,6 @@
 # webapp-jquery-mobile
 
-A [jquery mobile](http://jquerymobile.com/) app template. made by [Yeoman](http://yeoman.io/) [generator-webapp](https://github.com/yeoman/generator-webapp)
+A [jQuery Mobile](http://jquerymobile.com/) App template. made by [Yeoman](http://yeoman.io/) and [generator-webapp](https://github.com/yeoman/generator-webapp)
 
 ## Setup
 
